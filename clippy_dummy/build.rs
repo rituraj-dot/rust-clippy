@@ -14,9 +14,6 @@ fn main() {
 fn foo() -> Result<()> {
     let mut t = term::stderr().ok_or(Error::NotSupported)?;
 
-    t.attr(Attr::Bold)?;
-    t.fg(RED)?;
-    write!(t, "\nerror: ")?;
 
     t.reset()?;
     t.fg(WHITE)?;
